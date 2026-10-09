@@ -1,0 +1,76 @@
+{
+  "name": "Nuvio Türkçe Drama Deposu",
+  "version": "1.0.0",
+  "description": "DramaDünyam ve DramaKolik Asya & Kore dizileri eklentisi (Türkçe Altyazılı)",
+  "author": "Antigravity",
+  "scrapers": [
+    {
+      "id": "dramalar-unified",
+      "name": "Türkçe Dramalar (Hepsi Bir Arada)",
+      "description": "DramaDünyam ve DramaKolik üzerindeki tüm Türkçe altyazılı dizi akışlarını tek çatı altında toplar.",
+      "version": "1.0.0",
+      "author": "Antigravity",
+      "supportedTypes": [
+        "tv",
+        "movie"
+      ],
+      "filename": "providers/dramalar.js",
+      "enabled": true,
+      "formats": [
+        "m3u8",
+        "mp4"
+      ],
+      "logo": "https://dramadunyam.com/favicon.ico",
+      "contentLanguage": [
+        "tr",
+        "ko",
+        "zh",
+        "en"
+      ]
+    },
+    {
+      "id": "dramadunyam",
+      "name": "DramaDünyam",
+      "description": "DramaDünyam.com - Asya dizileri, Kore dizileri ve Türkçe altyazılı HLS akışları.",
+      "version": "1.0.0",
+      "author": "Antigravity",
+      "supportedTypes": [
+        "tv",
+        "movie"
+      ],
+      "filename": "providers/dramadunyam.js",
+      "enabled": true,
+      "formats": [
+        "m3u8"
+      ],
+      "logo": "https://dramadunyam.com/favicon.ico",
+      "contentLanguage": [
+        "tr",
+        "ko",
+        "en"
+      ]
+    },
+    {
+      "id": "dramakolik",
+      "name": "DramaKolik",
+      "description": "DramaKolik.co - Popüler Asya ve Uzak Doğu dizileri.",
+      "version": "1.0.0",
+      "author": "Antigravity",
+      "supportedTypes": [
+        "tv",
+        "movie"
+      ],
+      "filename": "providers/dramakolik.js",
+      "enabled": true,
+      "formats": [
+        "m3u8",
+        "mp4"
+      ],
+      "logo": "https://dramakolik.co/favicon.ico",
+      "contentLanguage": [
+        "tr",
+        "ko"
+      ]
+    }
+  ]
+}
