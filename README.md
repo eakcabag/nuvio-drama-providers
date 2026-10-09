@@ -1,53 +1,49 @@
 # Nuvio Türkçe Drama Eklentileri (Providers)
 
-Bu depo, **Nuvio** medya oynatıcı uygulaması için Tube İndirici'de kullanılan Asya ve Türkçe altyazılı drama sitelerini (**DramaDünyam** ve **DramaKolik**) entegre eden kazıyıcı (scraper/provider) eklentisidir.
+Bu depo, **Nuvio** medya oynatıcı uygulaması için Asya ve Türkçe altyazılı drama sitelerini (**DramaDünyam** ve **DramaKolik**) entegre eden resmi kazıyıcı (scraper/provider) eklenti deposudur.
 
 ---
 
-## 📁 Proje Yapısı
+## ⚡ Nuvio Uygulamasına Nasıl Eklenir? (Kolay Kurulum)
+
+1. **Nuvio** uygulamasını açın.
+2. **Ayarlar > Eklentiler (Settings > Plugins)** menüsüne gidin.
+3. **Depo Ekle (Add Repository)** alanına aşağıdaki bağlantıyı yapıştırın:
+
+```text
+https://raw.githubusercontent.com/eakcabag/nuvio-drama-providers/refs/heads/main/manifest.json
+```
+
+4. **Ekle / Yenile (Install / Refresh)** butonuna basın.
+5. Listeden dilediğiniz sağlayıcıyı (*Türkçe Dramalar Hepsi Bir Arada*, *DramaDünyam* veya *DramaKolik*) aktif edin.
+
+---
+
+## 📁 Eklenti ve Dosya Yapısı
 
 ```text
 nuvio-drama-providers/
 ├── manifest.json            # Nuvio eklenti kayıt dosyası
 ├── providers/
 │   ├── dramalar.js          # Hepsi Bir Arada (DramaDünyam + DramaKolik)
-│   ├── dramadunyam.js       # Sadece DramaDünyam sağlayıcısı
+│   ├── dramadunyam.js       # Sadece DramaDünyam sağlayıcısı (HLS & Türkçe Altyazı)
 │   └── dramakolik.js        # Sadece DramaKolik sağlayıcısı
-├── test.js                  # Test çalıştırma dosyası
+├── test.js                  # Terminal test aracı
 ├── serve.js                 # Yerel geliştirme ve CORS destekli HTTP sunucusu
 └── README.md
 ```
 
 ---
 
-## 🚀 Nuvio Uygulamasına Nasıl Eklenir?
+## 🧪 Yerel Test Etme (Opsiyonel)
 
-### Yöntem 1: Yerel Ağ Üzerinden (Geliştirici Modu / Plugin Tester)
-1. Termux üzerinde sunucuyu başlatın:
-   ```bash
-   cd ~/nuvio-drama-providers
-   node serve.js
-   ```
-2. Nuvio uygulamasını açın:
-   - **Ayarlar > Eklentiler (Settings > Plugins)** veya **Geliştirici Ayarları (Developer Settings)**
-   - Eklenti URL'si kısmına sunucunuzun IP adresini girin:
-     ```text
-     http://<TELEFONUN_YEREL_IP_ADRESI>:8080/manifest.json
-     ```
-   - **Ekle / Yenile (Add / Refresh)** butonuna basın.
-
-### Yöntem 2: GitHub Üzerinden (Tüm Cihazlar İçin Kalıcı)
-1. Bu klasörü kendi GitHub hesabınıza bir depo (repository) olarak push edin.
-2. Nuvio uygulamasına doğrudan GitHub raw bağlantısını ekleyin:
-   ```text
-   https://raw.githubusercontent.com/<KULLANICI_ADINIZ>/<DEPO_ADI>/refs/heads/main/manifest.json
-   ```
-
----
-
-## 🧪 Test Etme
-
-Eklentiyi terminalden doğrudan test etmek için:
+Terminal üzerinden akışları doğrulamak için:
 ```bash
 node test.js
 ```
+
+Yerel HTTP sunucusu üzerinden çalıştırmak için:
+```bash
+node serve.js
+```
+Yerel bağlantı: `http://localhost:8080/manifest.json`
