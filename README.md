@@ -11,8 +11,9 @@ Bu depo, **Nuvio** medya oynatıcı uygulaması için Asya ve Türkçe altyazıl
 3. **Depo Ekle (Add Repository)** alanına aşağıdaki bağlantıyı yapıştırın:
 
 ```text
-https://raw.githubusercontent.com/eakcabag/nuvio-drama-providers/refs/heads/main/manifest.json
+https://raw.githubusercontent.com/eakcabag/nuvio-drama-providers/refs/heads/main
 ```
+*(Not: Sonuna `/manifest.json` yazmayın, Nuvio bunu otomatik olarak ekler).*
 
 4. **Ekle / Yenile (Install / Refresh)** butonuna basın.
 5. Listeden dilediğiniz sağlayıcıyı (*Türkçe Dramalar Hepsi Bir Arada*, *DramaDünyam* veya *DramaKolik*) aktif edin.
